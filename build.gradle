@@ -1,0 +1,40 @@
+plugins {
+    id 'java'
+    id 'application'
+    id 'io.qameta.allure' version '2.11.2'
+}
+
+group = 'com.imdbQAA'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
+}
+
+dependencies {
+    // TestNG
+    testImplementation 'org.testng:testng:7.9.0'
+    // Selenide
+    testImplementation 'com.codeborne:selenide:7.5.0'
+    // Allure TestNG adapter
+    testImplementation 'io.qameta.allure:allure-testng:2.24.0'
+}
+
+test {
+    useTestNG()
+    // Enable Allure results generation
+    systemProperties = System.getProperties()
+    testLogging {
+        events "passed", "skipped", "failed"
+    }
+}
+
+allure {
+    version = '2.24.0'
+}
