@@ -18,18 +18,15 @@ java {
 }
 
 dependencies {
-    // TestNG
     testImplementation 'org.testng:testng:7.9.0'
-    // Selenide
-    testImplementation 'com.codeborne:selenide:7.5.0'
-    // Allure TestNG adapter
+    implementation  'com.codeborne:selenide:7.5.0'
     testImplementation 'io.qameta.allure:allure-testng:2.24.0'
 }
 
 test {
     useTestNG()
     // Enable Allure results generation
-    systemProperties = System.getProperties()
+    systemProperties = System.getProperties().collectEntries { k, v -> [k.toString(), v] }
     testLogging {
         events "passed", "skipped", "failed"
     }

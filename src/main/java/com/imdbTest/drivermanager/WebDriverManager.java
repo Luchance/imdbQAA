@@ -6,7 +6,7 @@ import com.codeborne.selenide.Configuration;
 import static com.codeborne.selenide.Selenide.open;
 import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
 
-public class WebdriverManager {
+public class WebDriverManager {
 
     public static void initDriver() {
         Configuration.browser = Browsers.CHROME;
