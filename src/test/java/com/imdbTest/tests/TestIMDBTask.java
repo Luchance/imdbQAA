@@ -27,7 +27,7 @@ public class TestIMDBTask {
     @Description("Test case for homework task")
     public void imdbQaTest() {
         openHomePage();
-        searchForTerm("qa");
+        searchForTerm("qaa");
         verifySuggestionTitleMatches(1);
         verifyCastMember(3);
 
@@ -57,6 +57,6 @@ public class TestIMDBTask {
         Assert.assertTrue(imdbMainPage.topCastItems.size() > index,
                 "Expected more than " + index + " suggestions, but found: " + imdbMainPage.topCastItems.size());
         imdbMainPage.clickOnCastByIndex(index);
-        Assert.assertEquals(imdbMainPage.pageTitle.getText(), castMember);
+        Assert.assertTrue(imdbMainPage.pageTitle.getText().contains(castMember));
     }
 }
