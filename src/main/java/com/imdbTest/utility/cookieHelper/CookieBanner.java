@@ -1,4 +1,4 @@
-package com.imdbTest.utility.coockeHelper;
+package com.imdbTest.utility.cookieHelper;
 
 import com.codeborne.selenide.SelenideElement;
 import com.codeborne.selenide.ex.ElementNotFound;

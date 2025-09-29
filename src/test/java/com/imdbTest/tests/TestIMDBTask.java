@@ -2,7 +2,7 @@ package com.imdbTest.tests;
 
 import com.imdbTest.drivermanager.WebDriverManager;
 import com.imdbTest.pages.ImdbCommonPage;
-import com.imdbTest.utility.coockeHelper.CookieBanner;
+import com.imdbTest.utility.cookieHelper.CookieBanner;
 import io.qameta.allure.Description;
 import io.qameta.allure.Step;
 import org.testng.Assert;
